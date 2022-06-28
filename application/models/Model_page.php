@@ -48,7 +48,8 @@ class Model_page extends CI_Model
 		return $this->db->get_where($table, array('id' => $where));
 	}	
 
-  function data($table, $where){		
+  function data($table, $where){
+		$this->db->order_by('waktu', 'DESC');		
 		return $this->db->get_where($table, array('id_afdeling' => $where));
 	}	
 
