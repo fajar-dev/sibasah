@@ -141,12 +141,13 @@
                                                           <input type="number" step="any" min="0" class="form-control" aria-label="Recipient's username" name="berat" aria-describedby="basic-addon2" required>
                                                           <span class="input-group-text" id="basic-addon2">.Kg</span>
                                                         </div>
+                                                        <small class="text-muted">*dalam satuan Kilogram</small>
                                                     </div>
                                                   </div>
                                                   <div class="col-12 mb-2">
                                                     <div class="form-group">
                                                         <label for="first-name-vertical">Waktu</label>
-                                                        <input type="date" id="first-name-vertical" class="form-control" name="waktu" required>
+                                                        <input type="date" id="first-name-vertical" class="form-control" value="<?php echo date("Y-m-d"); ?>" name="waktu" required>
                                                     </div>
                                                   </div>
                                                   <div class="col-12 mb-2">
