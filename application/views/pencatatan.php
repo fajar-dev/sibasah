@@ -138,7 +138,7 @@
                                                     <div class="form-group">
                                                         <label for="first-name-vertical">Berat Sampah</label>
                                                         <div class=" input-group">
-                                                          <input type="number" step="any" min="0"  class="form-control" aria-label="Recipient's username" name="berat" aria-describedby="basic-addon2" required>
+                                                          <input type="number" step="any" min="0" class="form-control" aria-label="Recipient's username" name="berat" aria-describedby="basic-addon2" required>
                                                           <span class="input-group-text" id="basic-addon2">.Kg</span>
                                                         </div>
                                                     </div>

@@ -26,9 +26,9 @@
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.html5.min.js"></script>
     <script src="https://cdn.datatables.net/buttons/2.2.3/js/buttons.print.min.js"></script>
 
-
+    <?php if(($_SERVER['PHP_SELF']) == ($_SERVER['SCRIPT_NAME'].'/page/laporan')){?> 
     <script>
-      $(document).ready(function() {
+       $(document).ready(function() {
         $('#example').DataTable( {
           paging: false,
           ordering: false,
@@ -40,7 +40,9 @@
             ]
         } );
     } ); 
-
+    </script>
+    <?php } ?> 
+      <script>
         // Simple Datatable
         const table1 = document.querySelector('#table1');
         const dataTable = new simpleDatatables.DataTable(table1); 

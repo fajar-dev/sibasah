@@ -50,6 +50,6 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |		my-controller/my-method	-> my_controller/my_method
 */
 $nama = 'Bank Sampah';
-$route['default_controller'] = 'welcome';
+$route['default_controller'] = 'page';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
