@@ -3,7 +3,7 @@
                         <div class="col-lg-5">
                           <div class="card">
                             <div class="card-header d-flex justify-content-between">
-                              <div><h4 class="card-title">Data Afddeling</h4></div>
+                              <div><h4 class="card-title">Data Afdeling</h4></div>
                               <div><button type="button" data-bs-toggle="modal" data-bs-target="#tambah" class="btn btn-primary btn-sm"><strong>+</strong> Tambah Data</button></div>
                                     <!-- Modal -->
                                     <div class="modal fade" id="tambah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -61,7 +61,7 @@
                                                   <div class="modal-content">
                                                     <form action="<?php echo base_url('page/edit_pencatatan/') ?>" method="POST">
                                                       <div class="modal-header">
-                                                        <h5 class="modal-title" id="exampleModalLabel">Edit Distrik</h5>
+                                                        <h5 class="modal-title" id="exampleModalLabel">Edit Afdeling</h5>
                                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                                       </div>
                                                       <div class="modal-body">
@@ -69,7 +69,7 @@
                                                           <div class="col-12 my-3">
                                                             <input type="hidden" name="id" value="<?php echo $data->id;?>">
                                                             <div class="form-group">
-                                                                <label for="first-name-vertical">Nama distrik</label>
+                                                                <label for="first-name-vertical">Nama Afdeling</label>
                                                                 <input type="text" id="first-name-vertical" class="form-control" name="nama" value="<?php echo htmlentities($data->nama, ENT_QUOTES, 'UTF-8');?>" required>
                                                             </div>
                                                           </div>
