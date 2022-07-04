@@ -97,12 +97,12 @@
                             </a>
                             </li>
 
-                            <li class="sidebar-title text-dark">Laporan distrik</li>
+                            <li class="sidebar-title text-dark">Laporan Afdeling</li>
                             <?php
                             foreach($sidebar as $data){
                             ?>
-                            <li class="sidebar-item  <?php if(($_SERVER['PHP_SELF']) == ($_SERVER['SCRIPT_NAME'].'/page/distrik/'.$data->id)){ echo 'active';} ?>">
-                            <a href="<?php echo site_url('page/distrik/'.$data->id) ?>" class='sidebar-link'>
+                            <li class="sidebar-item  <?php if(($_SERVER['PHP_SELF']) == ($_SERVER['SCRIPT_NAME'].'/page/afdeling/'.$data->id)){ echo 'active';} ?>">
+                            <a href="<?php echo site_url('page/afdeling/'.$data->id) ?>" class='sidebar-link'>
                                 <i class="bi bi-file-earmark-text"></i>
                                 <span><?php echo htmlentities($data->nama, ENT_QUOTES, 'UTF-8');?></span>
                             </a>

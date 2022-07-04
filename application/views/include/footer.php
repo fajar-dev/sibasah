@@ -7,13 +7,13 @@
     <script src="<?php echo base_url()?>assets/vendors/perfect-scrollbar/perfect-scrollbar.min.js"></script>
     <script src="<?php echo base_url()?>assets/js/bootstrap.bundle.min.js"></script>
 
+    <script src="<?php echo base_url()?>assets/vendors/apexcharts/apexcharts.js"></script>
+    <script src="<?php echo base_url()?>assets/vendors/simple-datatables/simple-datatables.js"></script>
+    <script src="<?php echo base_url()?>assets/vendors/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="<?php echo base_url()?>assets/js/main.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
-    <script src="<?php echo base_url()?>assets/vendors/apexcharts/apexcharts.js"></script>
-    <script src="<?php echo base_url()?>assets/vendors/simple-datatables/simple-datatables.js"></script>
-    <script src="<?php echo base_url()?>assets/vendors/sweetalert2/sweetalert2.all.min.js"></script>
     <script src="<?php echo base_url()?>assets/vendors/magnific/jquery.magnific-popup.js"></script>
     <script src="<?php echo base_url()?>assets/vendors/toastify/toastify.js"></script>
     <script src="https://cdn.datatables.net/1.12.1/js/dataTables.bootstrap5.min.js"></script>
@@ -43,8 +43,8 @@
     <?php } ?> 
       <script>
         // Simple Datatable
-        const table1 = document.querySelector('#table1');
-        const dataTable = new simpleDatatables.DataTable(table1); 
+        const dataTable = new simpleDatatables.DataTable("#table1", {
+        });
 
       // Basic
         $("#select").select2({

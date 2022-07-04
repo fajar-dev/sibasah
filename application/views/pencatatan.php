@@ -3,7 +3,7 @@
                         <div class="col-lg-5">
                           <div class="card">
                             <div class="card-header d-flex justify-content-between">
-                              <div><h4 class="card-title">Data Distrik</h4></div>
+                              <div><h4 class="card-title">Data Afddeling</h4></div>
                               <div><button type="button" data-bs-toggle="modal" data-bs-target="#tambah" class="btn btn-primary btn-sm"><strong>+</strong> Tambah Data</button></div>
                                     <!-- Modal -->
                                     <div class="modal fade" id="tambah" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
@@ -11,14 +11,14 @@
                                         <div class="modal-content">
                                           <form action="<?php echo base_url('page/tambah_pencatatan/') ?>" method="POST">
                                             <div class="modal-header">
-                                              <h5 class="modal-title" id="exampleModalLabel">Tambah Distrik</h5>
+                                              <h5 class="modal-title" id="exampleModalLabel">Tambah Afdeling</h5>
                                               <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                             </div>
                                             <div class="modal-body">
                                               <div class="form-body">
                                                 <div class="col-12 my-3">
                                                   <div class="form-group">
-                                                      <label for="first-name-vertical">Nama distrik</label>
+                                                      <label for="first-name-vertical">Nama Afdeling</label>
                                                       <input type="text" id="first-name-vertical" class="form-control" name="nama"  required>
                                                   </div>
                                                 </div>
@@ -38,7 +38,7 @@
                                     <thead>
                                         <tr>
                                             <th>NO</th>
-                                            <th>Nama Distrik</th>
+                                            <th>Nama Afdeling</th>
                                             <th>Aksi</th>
                                         </tr>
                                     </thead>
@@ -116,7 +116,7 @@
                                                   </div>
                                                   <div class="col-12 mb-2">
                                                       <div class="form-group">
-                                                          <label for="first-name-vertical">Nama Distrik</label>
+                                                          <label for="first-name-vertical">Nama Adeling</label>
                                                           <select class="form-select" id="select" name="id">
                                                             <?php
                                                               foreach($hasil as $data){

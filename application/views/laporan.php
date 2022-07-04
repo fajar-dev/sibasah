@@ -9,7 +9,7 @@
             <table id="example" class="table ">
                 <thead>
                     <tr>
-                        <th>distrik</th>
+                        <th>Afdeling</th>
                         <th>Input Terakhir</th>
                         <th>Berat</th>
                     </tr>
