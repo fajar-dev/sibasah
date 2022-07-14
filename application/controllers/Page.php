@@ -99,6 +99,7 @@ class Page extends CI_Controller {
 				'berat' => $this->input->post('berat'),
 				'waktu' => $this->input->post('waktu'),
 				'foto' => 'no-img.png',
+				'log_petugas' => $this->session->userdata('nama')
 			);
 				$this->db->insert('sampah',$data);
 				$this->session->set_flashdata('msg','tambah');
@@ -123,6 +124,7 @@ class Page extends CI_Controller {
 							'berat' => $this->input->post('berat'),
 							'waktu' => $this->input->post('waktu'),
 							'foto' => $hasil,
+							'log_petugas' => $this->session->userdata('nama')
 						);
 						$this->db->insert('sampah',$data);
 						$this->session->set_flashdata('msg','tambah');
@@ -138,6 +140,11 @@ class Page extends CI_Controller {
     $data['sidebar']= $this->Model_page->tampil('afdeling')->result();
     $data['hasil'] =  $this->Model_page->sum()->result();
     $data['total'] =  $this->Model_page->stat3('sampah')->row();
+		if(isset($_POST['submit'])){
+			$dari = $_POST['dari']; 
+			$sampai = $_POST['sampai'];
+			$data['harian'] =  $this->Model_page->harian('sampah', $dari, $sampai)->result();
+		}
 		$this->load->view('include/header', $data);
     $this->load->view('laporan');
 		$this->load->view('include/footer');

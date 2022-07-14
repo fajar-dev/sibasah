@@ -36,6 +36,10 @@ class Model_page extends CI_Model
 		return $this->db->query("SELECT *, SUM(berat) AS berat, MAX(waktu) AS terakhir  FROM sampah LEFT JOIN afdeling ON sampah.id_afdeling = afdeling.id GROUP BY id_afdeling");
 	}
 
+	function harian($table, $dari, $sampai){
+		return $this->db->query("SELECT * FROM $table LEFT JOIN afdeling ON sampah.id_afdeling = afdeling.id WHERE waktu >= '$dari' AND waktu  <= '$sampai'");
+	}
+
 	function tampil($table){
 		return $this->db->get_where($table);
 	}
