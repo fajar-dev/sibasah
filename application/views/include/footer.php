@@ -35,7 +35,52 @@
           searching: false,
             dom: 'Bfrtip',
             buttons: [
-                'copy', 'csv', 'excel', 'pdf', 'print'
+              {
+                extend: 'print',
+                messageTop: 'SIBASAH PTPN III Kebun Gunung Para',
+              },
+              {
+                  extend: 'excel',
+                  messageTop: 'SIBASAH PTPN III Kebun Gunung Para',
+              },
+              {
+                extend: 'pdfHtml5',
+                messageTop: 'SIBASAH PTPN III Kebun Gunung Para',
+                download: 'open',
+                pageSize: 'A4'
+              }
+            ]
+        } );
+      } ); 
+    </script>
+    <?php } ?> 
+    <?php if(isset($harian)){?> 
+    <script>
+      $(document).ready(function() {
+        $('#periode').DataTable( {
+          paging: false,
+          ordering: false,
+          info: false,
+          searching: false,
+            dom: 'Bfrtip',
+            buttons: [
+              {
+                extend: 'print',
+                title: 'Laporan periode <?php echo $dari.' - '.$sampai?>',
+                messageTop: 'SIBASAH PTPN III Kebun Gunung Para',
+              },
+              {
+                  extend: 'excel',
+                  title: 'Laporan periode <?php echo $dari.' - '.$sampai?>',
+                  messageTop: 'SIBASAH PTPN III Kebun Gunung Para',
+              },
+              {
+                extend: 'pdfHtml5',
+                title: 'Laporan periode <?php echo $dari.' - '.$sampai?>',
+                messageTop: 'SIBASAH PTPN III Kebun Gunung Para',
+                download: 'open',
+                pageSize: 'A4'
+              }
             ]
         } );
     } ); 

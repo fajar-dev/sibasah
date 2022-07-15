@@ -141,9 +141,9 @@ class Page extends CI_Controller {
     $data['hasil'] =  $this->Model_page->sum()->result();
     $data['total'] =  $this->Model_page->stat3('sampah')->row();
 		if(isset($_POST['submit'])){
-			$dari = $_POST['dari']; 
-			$sampai = $_POST['sampai'];
-			$data['harian'] =  $this->Model_page->harian('sampah', $dari, $sampai)->result();
+			$data ['dari'] = $_POST['dari']; 
+			$data ['sampai'] = $_POST['sampai'];
+			$data['harian'] =  $this->Model_page->harian('sampah', $data['dari'], $data['sampai'])->result();
 		}
 		$this->load->view('include/header', $data);
     $this->load->view('laporan');

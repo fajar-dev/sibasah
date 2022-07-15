@@ -47,21 +47,20 @@
           <div class="row g-3">
             <div class="col">
               <label>Dari :</label>
-              <input type="date" class="form-control" name="dari">
+              <input type="date" class="form-control" name="dari" value="<?php if(isset($dari)){ echo $dari; } ?>" required>
             </div>
             <div class="col">
               <label>sampai :</label>
-              <input type="date" class="form-control" name="sampai">
+              <input type="date" class="form-control" name="sampai" value="<?php if(isset($sampai)){ echo $sampai; } ?>" required>
             </div>
           </div>
           <button class="btn btn-primary my-3  btn-block" name="submit">Tampilkan </button>
         </form>
 
-                              <?php if ($harian == null); { ?>
-                                <table class="table table-striped" id="table1">
+                              <?php if (isset($harian)) { ?>
+                                <table class="table table-striped" id="periode">
                                     <thead>
                                         <tr>
-                                            <th>NO</th>
                                             <th>Afdeling</th>
                                             <th>Jenis</th>
                                             <th>Penanggung Jawab</th>
@@ -74,7 +73,6 @@
                                             foreach($harian as $data){
                                           ?>
                                         <tr>
-                                            <td><?php echo $no++; ?></td>
                                             <td><?php echo htmlentities($data->nama, ENT_QUOTES, 'UTF-8');?></td>
                                             <td><?php echo $data->jenis;?></td>
                                             <td><?php echo htmlentities($data->pj, ENT_QUOTES, 'UTF-8');?></td>
